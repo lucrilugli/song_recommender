@@ -25,22 +25,22 @@ st.write("#### Choose the parameters of the song:")
 
 # Sliders for the values
 # dance
-dance_value = st.slider('Set the min level of dancebility?', min_value=0.0, max_value=1.0, value=0.54, step=0.1)
+dance_value = st.slider('Set the minimum level of dancebility?', min_value=0.0, max_value=1.0, value=0.54, step=0.1)
 
 # acousticness
-acoustic_value = st.slider('Set the min level of acousticness?', min_value=0.0, max_value=1.0, value=0.49, step=0.1)
+acoustic_value = st.slider('Set the minimum level of acousticness?', min_value=0.0, max_value=1.0, value=0.49, step=0.1)
 
 # energy
-energy_value = st.slider('Set the min level of energy?', min_value=0.0, max_value=1.0, value=0.48, step=0.1)
+energy_value = st.slider('Set the minimum level of energy?', min_value=0.0, max_value=1.0, value=0.48, step=0.1)
 
 # instrumentalness
-instrumental_value = st.slider('Set the min level of instrumentalness?', min_value=0.0, max_value=1.0, value=0.48, step=0.1)
+instrumental_value = st.slider('Set the minimum level of instrumentalness?', min_value=0.0, max_value=1.0, value=0.48, step=0.1)
 
 # popularity
-popularity_value = st.slider('Set the min level of popularity?', min_value=1.0, max_value=100.0, value=33.0, step=1.0)
+popularity_value = st.slider('Set the minimum level of popularity?', min_value=1.0, max_value=100.0, value=33.0, step=1.0)
 
 # year
-year_value = st.slider('Set the min level of year?', min_value=1921, max_value=2020, value=1999, step=1)
+year_value = st.slider('Set the minimum level of year?', min_value=1921, max_value=2020, value=1999, step=1)
 
 # filtering the data based on above criteria
 df_filtered = df.query('danceability >= @dance_value & acousticness >= @acoustic_value & energy >= @energy_value &  instrumentalness >= @instrumental_value & popularity >= @popularity_value & year >= @year_value')
