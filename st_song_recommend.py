@@ -14,7 +14,10 @@ st.set_page_config(page_title = "#🎶Song Recommendations"
                     )
 
 # read the data 
-df = pd.read_csv("spotify_data.zip")
+url = 'https://github.com/vkoul/data/raw/main/misc/spotify_data.zip'
+df = pd.read_csv(url)
+
+# add a column
 df['song_url'] = 'https://open.spotify.com/track/' + df['id']
 
 
