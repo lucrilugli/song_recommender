@@ -2,8 +2,6 @@
 import streamlit as st
 import pandas as pd
 import pickle
-from IPython.display import HTML
-
 
 # pandas options
 pd.set_option('display.max_colwidth', None)
@@ -91,9 +89,6 @@ neighbors = df.loc[neighbor_list,['name', 'song_url']]
 
 # cleaning operations
 neighbors = neighbors.reset_index(drop= True).rename(columns = {'name': 'Song', 'song_url': 'Spotify Link'})
-
-# render the links
-HTML(neighbors.to_html(render_links=True, escape=False))
 
 # st.write(neighbors, unsafe_allow_html = True)
 
