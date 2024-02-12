@@ -8,7 +8,7 @@ pd.set_option('display.max_colwidth', None)
 
 # setting the basic configuration of the web app. This is shown in the Tab
 st.set_page_config(page_title = "#🎶Song Recommendations" 
-                    ,page_icon = ":bar_chart:" 
+                    ,page_icon = ":musical_note:" 
                     )
 
 # read the data 
